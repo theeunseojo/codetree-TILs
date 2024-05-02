@@ -12,8 +12,8 @@ int main() {
         int n ;
         cin >> n;
       
-        if(n > len){
-            str = str.erase(len -1,1);
+        if(n >= len){
+            str = str.erase(len - 1,1);
         }
         else{
             str = str.erase(n,1);
