@@ -29,6 +29,7 @@ int main() {
             for(int i = 0; i < len; i++){
               cout << s[len - i -1];
             }
+            cout << endl;
         }   
         
     }
