@@ -7,12 +7,13 @@ int main() {
     char x;
     cin >> x;
     
+    int x_num = (int)x;
 
     if(x == 'z'){
         cout << 'a';
     }
     else{
-        cout << (char)(x - 1);
+        cout << (char)(x_num - 1);
     }
     return 0;
 }
