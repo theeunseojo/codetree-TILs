@@ -9,8 +9,8 @@ int main() {
     
     int x_num = (int)x;
 
-    if(x == 'z'){
-        cout << 'a';
+    if(x == 'a'){
+        cout << 'z';
     }
     else{
         cout << (char)(x_num - 1);
