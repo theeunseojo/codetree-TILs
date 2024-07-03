@@ -10,17 +10,16 @@ int main() {
     cin >> n;
     cin >> a;
 
-    int idx;
+    int sum = 0;
     for(int i = 0; i < n; i++){
         string input;
         cin >> input;
 
         if(a == input){
-            idx = i ;
-            break;
+            sum += 1 ;
         }
     }
 
-    cout << idx;
+    cout << sum;
     return 0;
 }
