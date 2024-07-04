@@ -4,7 +4,7 @@ using namespace std;
 void GetComNum(int n , int m){
     int min = (n < m) ? n : m;
     int num = 0;
-    for(int i = 2; i <= min; i++){
+    for(int i = 1; i <= min; i++){
         if(n % i == 0 && m % i == 0) num = i;
     }
     cout << num;
