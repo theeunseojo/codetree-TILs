@@ -6,7 +6,7 @@ bool IsPrime(int n){
     for(int i = 2; i < n; i++){
         if(n % i == 0) return false;
     }
-    
+
     return true;
 }
 
@@ -15,6 +15,7 @@ int main() {
     int a , b;
     cin >> a >> b;
     int sum = 0;
+    if(a == 1) sum = -1;
     for(int i = a; i <= b; i++){
         if(IsPrime(i)) sum += i;
     }
