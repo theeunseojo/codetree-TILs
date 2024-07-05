@@ -4,8 +4,8 @@ using namespace std;
 int GetMin(int a, int b, int c){
     
     int min = 0;
-    if( a < b && a < c ) min = a;
-    else if ( a < b && a > c) min = c;
+    if( a <= b && a <= c ) min = a;
+    else if ( a <= b && a >= c) min = c;
     else min = b;
     return min;
 }
