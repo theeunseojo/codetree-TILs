@@ -3,10 +3,10 @@ using namespace std;
 
 int GetMin(int a, int b, int c){
     
-    int min = 0;
-    if( a <= b && a <= c ) min = a;
-    else if ( a <= b && a >= c) min = c;
-    else min = b;
+    int min = a;
+    min = (min < b) ? min : b;
+    min = (min < c) ? min : c;
+    
     return min;
 }
 int main() {
