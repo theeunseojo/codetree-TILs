@@ -4,8 +4,9 @@ using namespace std;
 
 bool IsYoon(int y){
     if(y % 4 == 0){
-        if(y % 100 == 0 && y % 400 == 0) return true; // 100의 배수 이면서 400의 배수 
+        if((y % 100 == 0) && (y % 400 == 0)) return true; // 100의 배수 이면서 400의 배수 
         // 100의 배수 X 400의 배수 O , 100의 배수 o  400의 배수 X
+        else return false;
     }
     else return false;
 }
