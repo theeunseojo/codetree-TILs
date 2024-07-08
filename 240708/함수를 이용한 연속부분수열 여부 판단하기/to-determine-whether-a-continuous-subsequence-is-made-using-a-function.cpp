@@ -3,13 +3,15 @@ using namespace std;
 
 // 수열 B가 수열 A의 연속 부분수열인지 판별하는 함수 
 bool IsSub(int a[] , int b[] , int a_len , int b_len){
+
     bool flag = false;
 
     for(int i = 0; i < a_len; i++){
         for(int j = 0; j < b_len; j++){
-            if(a[i + j] == b[j]){ // 두 배열이 같은 지 check
+            if(a[i + j] == b[j]){ // 부분배열인지 계속 확인 
                 flag = true;
             }
+            else break;
         }
     }
     return flag;
