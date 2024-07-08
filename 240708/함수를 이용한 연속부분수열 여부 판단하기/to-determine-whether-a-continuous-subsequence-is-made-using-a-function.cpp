@@ -11,7 +11,10 @@ bool IsSub(int a[] , int b[] , int a_len , int b_len){
             if(a[i + j] == b[j]){ // 부분배열인지 계속 확인 
                 flag = true;
             }
-            else break;
+            else{
+                flag = false;
+                break;
+            }
         }
     }
     return flag;
