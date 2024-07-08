@@ -4,14 +4,15 @@ using namespace std;
 
 bool IsYoon(int y){
     if(y % 4 == 0){ // 4의 배수
-        if((y % 100 == 0) && (y % 400 == 0)) return true; // 100의 배수 이면서 400의 배수 
-        // 100의 배수 X 400의 배수 O , 100의 배수 o  400의 배수 X
-        else return false;
+        if((y % 100 == 0) && (y % 400 != 0)) return false;
+        // 100의 배수 이면서 400의 배수 
+        //100의 배수 o  400의 배수 X
+        else return true;
     }
     else return false;
 }
-int LastDay(int y,int m){
 
+int LastDay(int y,int m){
     if(m == 2){
         // 윤년인지 check 
         if(IsYoon(y)) return 29;
@@ -25,6 +26,7 @@ void GetSeason(int y , int m , int d){
 
     // day가 해당 해에 존재한다면
     if(d <= LastDay(y, m)){
+        
         if(m >= 3 && m <= 5) cout << "Spring";
         else if ( m >= 6 && m <= 8) cout << "Summer";
         else if( m >= 9 && m <= 11) cout << "Fall";
