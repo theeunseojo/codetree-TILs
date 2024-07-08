@@ -5,17 +5,14 @@ using namespace std;
 bool IsSub(int a[] , int b[] , int a_len , int b_len){
 
     bool flag = false;
-
     for(int i = 0; i < a_len; i++){
         for(int j = 0; j < b_len; j++){
             if(a[i + j] == b[j]){ // 부분배열인지 계속 확인 
                 flag = true;
             }
-            else{
-                flag = false;
-                break;
-            }
+            break;
         }
+        
     }
     return flag;
 }
