@@ -4,10 +4,8 @@ using namespace std;
 
 bool IsDate(int m , int d){
 
-
     //IsMonth
-    if(m < 1 && m > 12) return false;
-
+    if(m < 1 || m > 12) return false;
 
     //IsDay
     if(d >= 1 && d <= 31){
@@ -20,7 +18,7 @@ bool IsDate(int m , int d){
         if(m == 4 || m == 9 || m == 11)
             if (d <= 30) return true;
             else return false;
-            
+
         return true;
     }
 
