@@ -13,6 +13,7 @@ int IndexStr(){
     int a_len = str1.length();
     int b_len = str2.length();
 
+    int cnt = 0;
     // 부분문자열 찾기  
     for(int i = 0; i < a_len - b_len + 1; i++){
         for(int j = 0; j < b_len; j++){ 
@@ -27,9 +28,12 @@ int IndexStr(){
             }
         }
         // flag = true -> idx 저장 , 더 작은 idx만 저장 
-        if(flag) idx = (idx < i) ? idx : i;
+        if(flag) {
+            idx = (idx < i) ? idx : i;
+            cnt++;  // 부분문자열의 갯수 
+        }
     }
-    if(flag) return idx;
+    if(cnt > 0) return idx; // 하나라도 존재하면 
     else return -1;
 }
 
