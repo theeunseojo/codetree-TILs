@@ -20,8 +20,17 @@ int main() {
 
     sort(a, a + n);
     sort(b, b + n);
-    
-    if(a == b) cout << "Yes";
+
+    bool flag = false;
+
+    for(int i = 0; i < n; i++){
+        if(a[i] != b[i]) {
+            flag = false;
+            break;
+        }
+        else flag = true;
+    }
+    if(flag) cout << "Yes";
     else cout << "No";
     return 0;
 }
