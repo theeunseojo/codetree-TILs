@@ -20,14 +20,8 @@ int main() {
 
     sort(a, a + n);
     sort(b, b + n);
-
-    bool flag  = false; // 원소를 check 
-
-    for(int i = 0; i < n; i++){
-        if(a[i] == b[i]) flag = true;
-        else flag = false;
-    }
-    if(flag) cout << "Yes";
+    
+    if(a == b) cout << "Yes";
     else cout << "No";
     return 0;
 }
