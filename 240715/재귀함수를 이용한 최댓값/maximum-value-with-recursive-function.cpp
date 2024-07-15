@@ -5,7 +5,7 @@ int arr[101];
 
 int Max(int n){
     if(n == 0) return 0;
-    if(arr[n] > Max(n - 1)) return arr[n];
+    if(arr[n] >= Max(n - 1)) return arr[n];
     return Max(n - 1);
 }
 int main() {
