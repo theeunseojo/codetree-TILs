@@ -25,6 +25,7 @@ int main() {
 
     for(int i = 0; i < n; i++){
         if(a[i] == b[i]) flag = true;
+        else flag = false;
     }
     if(flag) cout << "Yes";
     else cout << "No";
