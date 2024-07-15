@@ -5,9 +5,11 @@ int arr[101];
 
 int Max(int n){
     if(n == 0) return 0;
-    if(arr[n] >= Max(n - 1)) return arr[n];
-    return Max(n - 1);
-}
+    int max = Max(n - 1);
+
+    if(arr[n] >= max) return arr[n];
+    return max;
+} 
 int main() {
     // 여기에 코드를 작성해주세요.
     int n;
