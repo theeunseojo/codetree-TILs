@@ -18,7 +18,7 @@ int main() {
     int sum = 0;
     int num = 0;
     for(int i = 0; i < n; i++){
-        sum = arr[i] + arr[2 * n - i];
+        sum = arr[i] + arr[2 * n - (1 + i)];
         num = max(sum, num);
     }
 
