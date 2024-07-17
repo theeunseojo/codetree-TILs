@@ -27,14 +27,23 @@ int main() {
         cin >> name >> addr >> city;
         person[i] = Person(name, addr, city);
     }
-    string max = person[0].name;
-    int idx;
 
+    int idx = 0;
+    /*
+    //사전순으로 이름이 가장 느린 사람 찾기.
     for(int i = 0; i < n; i++){
-        if(max < person[i].name) max = person[i].name;
-        idx = i;
+        if(person[i].name > person[idx].name) idx = i;
     }
 
+*/
+    string max = person[0].name;
+    for(int i = 0; i < n; i++){
+        if(max < person[i].name) {
+            idx = i;
+            max = person[i].name;
+        }
+    }
+    
     cout << "name " << person[idx].name << endl;
     cout << "addr " << person[idx].addr << endl;
     cout << "city " << person[idx].city << endl;
