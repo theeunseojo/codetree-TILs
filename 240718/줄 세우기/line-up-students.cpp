@@ -19,11 +19,13 @@ class Student{
 
 bool cmp(Student a , Student b){
     // 키 내림차순 
-    if(a.h != b.h)
+    if(a.h != b.h){
         return a.h > b.h;
+    }
     // 몸무게 내림차순
-    if(a.w != b.w)  
-        return a.w > b.h;
+    if(a.w != b.w){
+        return a.w > b.w;
+    }
     // 번호 올림차순
     return a.num < b.num;
 }
