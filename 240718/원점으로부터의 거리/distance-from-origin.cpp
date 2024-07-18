@@ -20,7 +20,9 @@ class Position{
 
 // 절댓값을 구하는 함수 
 int abs(int x, int y){
-    if(x + y < 0 ) return -(x + y);
+    if(x < 0) x = -x;
+    if(y < 0) y = -y;
+    //if(x + y < 0 ) return -(x + y);
     return x + y;
 }
 
