@@ -8,6 +8,7 @@ int main() {
 
     //day -> min
     int month_to_min = (a - 11) * 24 * 60 ;
+
     if(month_to_min < 0) {
         cout << -1;
         return 0;
@@ -15,10 +16,8 @@ int main() {
 
     // hour calculate
     int elaspsed_time = (b * 60 + c) - (11 * 60 + 11);
-    if(elaspsed_time < 0) {
-        cout << -1;
-        return 0;
-    }
+    // if month is correct, we need to check the time
+    if(elaspsed_time < 0) (11 * 60 + 11) - (b * 60 + c);
 
     cout << month_to_min + elaspsed_time;
     return 0;
