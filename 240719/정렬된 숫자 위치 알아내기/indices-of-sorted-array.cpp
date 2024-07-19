@@ -3,7 +3,7 @@
 #define MAX 1000
 using namespace std;
 
-pair<int, int> list;
+
 bool cmp(pair<int, int> a, pair<int, int> b){
     if(a.first == b.first) return a.first < b.first;
     return a.first < b.first;
@@ -21,7 +21,7 @@ int main() {
         list[i].second = (i + 1);   // index
     }
 
-    sort(list, list + n, cmp);
+    sort(list, list + n);
 
     // sorted original index array
     int sorted_index[MAX] = {};
