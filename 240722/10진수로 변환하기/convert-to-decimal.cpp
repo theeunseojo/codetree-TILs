@@ -14,6 +14,7 @@ int main() {
             num += i * n;
             break;
         }
+        if(n == 0) break;
         num += i * (n % 10);
         i *= 2;
         n /= 10;
