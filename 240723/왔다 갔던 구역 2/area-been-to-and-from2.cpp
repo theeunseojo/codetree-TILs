@@ -22,7 +22,7 @@ int main() {
             start_pos += pos;
         }
         else{
-            for(int i = start_pos; i > start_pos - pos; i--){   // 구간이므로 
+            for(int i = start_pos - 1; i >= start_pos - pos; i--){   // 구간이므로 
                 area[i]++;
             }
             start_pos -= pos;
