@@ -7,7 +7,7 @@ int main() {
     int n, k;
     cin >> n >> k;
 
-    int blocks[n] = {0,};   // 블록 초기 상황 
+    int blocks[n + 1] = {0, };   // 블록 초기 상황 
 
     for(int i = 1; i <= k; i++){
         int a, b;
@@ -19,6 +19,7 @@ int main() {
     // 최댓값
     int ans = -1;
     for(int i = 1; i <= n; i++){
+        //cout << blocks[i] << " ";
         ans = max(ans, blocks[i]);
     }
     cout << ans;
