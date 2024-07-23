@@ -7,17 +7,20 @@ int main() {
     int n, k;
     cin >> n >> k;
 
-    int blocks[n + 1] = {0,};   // 블록 초기 상황 
-    int t = -1;
+    int blocks[n] = {0,};   // 블록 초기 상황 
+
     for(int i = 1; i <= k; i++){
         int a, b;
         cin >> a >> b;
         for(int j = a; j <= b; j++){
             blocks[j] += 1; // 블록 쌓기 
         }
-        t = max(t, blocks[i]);
     }
-    
-    cout << t;
+    // 최댓값
+    int ans = -1;
+    for(int i = 1; i <= n; i++){
+        ans = max(ans, blocks[i]);
+    }
+    cout << ans;
     return 0;
 }
