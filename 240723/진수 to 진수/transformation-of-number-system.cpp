@@ -26,7 +26,7 @@ int main() {
     int cnt = 0;
     while(true){
         if(num < b){
-            bits[cnt] = num;  // cnt++ -> 출력시 cnt - 1
+            bits[cnt++] = num;  // cnt++ -> 출력시 cnt - 1
             break;
         }
         bits[cnt++] = num % b;
