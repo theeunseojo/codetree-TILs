@@ -54,7 +54,7 @@ int main() {
 
     for(int i = 0; i < MAX; i++){
     
-        if(tile[i].w_num + tile[i].b_num >= 4){
+        if(tile[i].w_num >= 2 && tile[i].b_num >= 2){
             grey_tile++;
         }
         else{
