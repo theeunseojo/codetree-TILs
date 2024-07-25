@@ -43,7 +43,6 @@ int main() {
     for(int i = 0; i < MAX; i++){
         for(int j = 0; j < MAX; j++){
             if(checked[i][j] == 1){
-                cout << i << " " << j << endl;
                 if(x < i) x = i;
                 if(y < j) y = j;
             }
