@@ -43,14 +43,20 @@ int main() {
     for(int i = 0; i < MAX; i++){
         for(int j = 0; j < MAX; j++){
             if(checked[i][j] == 1){
-                //cout << i << " " << j << endl;
+                cout << i << " " << j << endl;
                 if(x < i) x = i;
                 if(y < j) y = j;
             }
         }
     }
-    //cout << x << " " << y << endl;
-    int area = (x - x1 + 1) * (y - y1 + 1);
+    // 넓이 구하기 
+    //시뮬레이션으로 해결 <- 엣지 케이스 : A < B, A = B, A < B
+    int area = 0;
+    for(int i = x1; i <= x; i++){
+        for(int j = y1; j <= y2; j++){
+            if(checked[i][j] == 1) area++;
+        }
+    }
     cout << area;
     return 0;
 }
