@@ -48,12 +48,15 @@ int main() {
             }
         }
     }
+    //cout << x << " " << y << endl;
     // 넓이 구하기 
     //시뮬레이션으로 해결 <- 엣지 케이스 : A < B, A = B, A < B
     int area = 0;
     for(int i = x1; i <= x; i++){
         for(int j = y1; j <= y2; j++){
-            if(checked[i][j] == 1) area++;
+            if(checked[i][j] == 1) {
+                area = (x - x1 + 1) * (y - y1 + 1);
+            }
         }
     }
     cout << area;
