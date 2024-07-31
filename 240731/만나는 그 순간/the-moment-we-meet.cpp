@@ -1,5 +1,5 @@
 #include <iostream>
-#define MAX 1001
+#define MAX 1000000
 using namespace std;
 
 int main() {
@@ -62,8 +62,7 @@ int main() {
         if(a[i] == b[i]){
             meeting_point = i + 1;
             break;
-        }
-        
+        } 
     }
     cout << meeting_point;
     return 0;
