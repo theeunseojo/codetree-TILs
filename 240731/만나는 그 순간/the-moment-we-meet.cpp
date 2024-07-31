@@ -54,14 +54,16 @@ int main() {
         }
      
     }
-  
+
     // 만나는 점 확인
+    // time 까지 확인해야함.
     int meeting_point = -1;
-    for(int i = 1; i < MAX; i++){
+    for(int i = 1; i < time; i++){
         if(a[i] == b[i]){
             meeting_point = i + 1;
             break;
         }
+        
     }
     cout << meeting_point;
     return 0;
