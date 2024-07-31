@@ -15,14 +15,13 @@ int main() {
     //벌금 부과
     int ans = -1;
     for(int i = 0; i < m; i++){
-        int sc;
-        cin >> sc;
-        for(int j = 1; j <= n; j++){
-            if(j == sc) student[j]--;
-            if(student[j] == 0){
-                ans = j;
-                break;
-            }
+        int num;
+        cin >> num;
+        // 벌점 부여 번호 해당 학생 
+        student[num]--;
+        if(student[num] == 0){
+            ans = num;
+            break;
         }
     }
 
