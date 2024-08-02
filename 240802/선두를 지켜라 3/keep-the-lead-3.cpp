@@ -41,22 +41,23 @@ int main() {
     // 선두가 바뀔 경우, 무조건 추가 이때 같은 경우도 고려 
     int cnt = 0;
     int leader = 0;
-    for(int i = 1; i < time; i++){
+    for(int i = 0; i < time; i++){
         if(a[i] > b[i]){
             if(leader == 2 || leader == 3) cnt++;
             leader = 1;
         }
         else if(a[i] == b[i]){
-            if(leader = 1 || leader == 2) cnt++;
+            if(leader == 1 || leader == 2) cnt++;
             leader = 3;
         }
         else{
             if(leader == 1 || leader == 3) cnt++;
             leader = 2;
         }
+
     }
     
-    if(cnt == 0) cout << cnt + 1;   // 선두가 안바뀔 경우 
+    if(cnt == 0) cout << cnt + 1;   // 선두가 안바뀌었을 경우 
     else cout << cnt;
     return 0;
 }
