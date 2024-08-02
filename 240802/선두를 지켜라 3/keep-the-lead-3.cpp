@@ -40,7 +40,7 @@ int main() {
     // A와 B 명예의 전당 기록 및 비교 
     // 선두가 바뀔 경우, 무조건 추가 이때 같은 경우도 고려 
     int cnt = 0;
-    int leader = 3;
+    int leader = 0;
     for(int i = 1; i < time; i++){
         if(a[i] > b[i]){
             if(leader == 2 || leader == 3) cnt++;
@@ -56,7 +56,7 @@ int main() {
         }
     }
     
-    if(cnt == 1) cout << cnt; //  선두가 바꾸지 않았을 경우 
-    else cout << cnt - 1;
+    if(cnt == 0) cnt = 1;   // 선두가 안바뀔 경우 
+    cout << cnt;
     return 0;
 }
