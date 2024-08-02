@@ -25,7 +25,7 @@ int main() {
     // record the B
     int b[MAX] = {};
     time = 1;
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < m; i++){
         int v;
         int t;
         cin >> v >> t;
@@ -36,7 +36,7 @@ int main() {
             time += 1;
         }
     }
-
+    
     // A와 B 명예의 전당 기록 및 비교 
     // 선두가 바뀔 경우, 무조건 추가 이때 같은 경우도 고려 
     int cnt = 0;
@@ -55,6 +55,7 @@ int main() {
             leader = 2;
         }
     }
+    
     if(cnt == 1) cout << cnt; //  선두가 바꾸지 않았을 경우 
     else cout << cnt - 1;
     return 0;
