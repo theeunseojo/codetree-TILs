@@ -56,7 +56,7 @@ int main() {
         }
     }
     
-    if(cnt == 0) cnt = 1;   // 선두가 안바뀔 경우 
-    cout << cnt;
+    if(cnt == 0) cout << cnt + 1;   // 선두가 안바뀔 경우 
+    else cout << cnt;
     return 0;
 }
