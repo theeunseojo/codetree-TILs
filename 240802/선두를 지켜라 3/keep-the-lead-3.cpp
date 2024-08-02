@@ -61,6 +61,7 @@ int main() {
             }
         }
     }
-    cout << cnt - 1;    // 0초의 경우 제외
+    if(cnt == 0) cnt = 1;   // 계속 같을때의 경우 예외처리
+    else cout << cnt - 1;    // 0초에서는 무조건 같으므로, 그 경우 제외 
     return 0;
 }
