@@ -29,7 +29,7 @@ int main() {
     int y = c; // col
     int move_dir = dir(d);
 
-    while(t){
+    while(t > 0){ // think about t < 0 
         // to check the range set the nx, ny
         int nx = x + dx[move_dir];
         int ny = y + dy[move_dir];
