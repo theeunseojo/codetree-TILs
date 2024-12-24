@@ -28,9 +28,10 @@ int main() {
         else if(dir == 'W') dir_num = 2;
         else dir_num = 3;
         
+
         for(int i = 1; i <= dis; i++){
-            x += i * dx[dir_num];
-            y += i * dy[dir_num];
+            x += dx[dir_num];
+            y += dy[dir_num];
             time++;
             if(x == 0 && y == 0){
                 cout << time;
