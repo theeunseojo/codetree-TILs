@@ -67,10 +67,10 @@ public class Main {
             }
         }
         
-        int minK = 0;
-        int maxCount = 0; 
+        int minK = -1;
+        int maxCount = -1; 
 
-        for(int s = 1; s < k; s++){
+        for(int s = 1; s <= k; s++){
             count = 0;
             visited = new boolean[n][m];
 
