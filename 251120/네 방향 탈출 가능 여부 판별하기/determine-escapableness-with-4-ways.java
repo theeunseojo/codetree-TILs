@@ -25,7 +25,7 @@ public class Main {
     
 
     public static boolean inRange(int x, int y){
-        if(x < 0 || x >= n || y < 0 || y >= n){
+        if(x < 0 || x >= n || y < 0 || y >= m){
             return false;
         }
         return true;
