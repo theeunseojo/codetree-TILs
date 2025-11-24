@@ -135,9 +135,16 @@ public class Main {
 
             push(r,c);
             bfs();
-
-            r = bestX;
-            c = bestY;
+            
+            // 이동할 곳이 존재하지 않는다
+            if(bestVal != -1){
+                r = bestX;
+                c = bestY;
+            }
+            else {
+                break;
+            }
+           
 
 
             //System.out.println(k + " , " + r + " , " + c);
