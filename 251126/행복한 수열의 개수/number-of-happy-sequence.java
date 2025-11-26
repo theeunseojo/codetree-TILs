@@ -5,6 +5,11 @@ public class Main {
     static int n;
     public static boolean IsHaveByRow(int row, int m){
         int count = 1;
+
+        if(count == m){
+            return true;
+        }
+
         for(int i = 0; i < n - 1; i++){
             int before = grid[row][i];
             int after = grid[row][i + 1];
@@ -30,9 +35,15 @@ public class Main {
     public static boolean IsHaveByCol(int col, int m){
         int count = 1;
 
+        if(count  == m){
+            return true;
+        }
+        
         for(int i = 0; i < n - 1; i++){
             int before = grid[i][col];
             int after = grid[i + 1][col];
+
+            
 
             if(before == after){
                 count++;
@@ -76,9 +87,10 @@ public class Main {
         for(int col = 0; col < n; col++){
             if(IsHaveByCol(col, m)){
                 total++;
-               // System.out.println("col : " + col + "count = " + total);
+                //System.out.println("col : " + col + "count = " + total);
             }
         }
+
 
         System.out.println(total);
     }
