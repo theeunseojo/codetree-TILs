@@ -11,16 +11,16 @@ public class Main {
 
             if(before == after){
                 count++;
-                if(count  == m){
-                    return true;
-                }
+                
             }
             // 다를 경우
             else{
                 count = 1;
-                if(count  == m){
-                    return true;
-                }
+                
+            }
+
+            if(count  == m){
+                return true;
             }
         }
 
@@ -36,15 +36,15 @@ public class Main {
 
             if(before == after){
                 count++;
-                if(count == m){
-                    return true;
-                }
+                
             }
             else{
                 count = 1;
-                if(count  == m){
-                    return true;
-                }
+                
+            }
+
+            if(count  == m){
+                return true;
             }
         }
 
