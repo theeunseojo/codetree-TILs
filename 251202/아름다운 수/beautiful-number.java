@@ -7,17 +7,21 @@ public class Main {
 
     public static void select(int curr){
         // 종료조건
-       
+    
         if( curr == n + 1){
             count++;
             return;
         }
-        for(int i = 1; i <= n; i++){
+
+        for(int i = 1; i <= 4; i++){
             if(curr + i - 1 <= n){
                 // curr ~ curr + i - 1까지 
                 for(int j = 0; j < i; j++){
                     arr[curr + j] = i;
+                    //System.out.print(arr[curr + j] + " ");
+
                 }
+                //System.out.println();
 
                 // curr + i부터 블록 채우기
                 select(curr + i);
