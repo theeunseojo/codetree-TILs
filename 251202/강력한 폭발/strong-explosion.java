@@ -44,8 +44,12 @@ public class Main {
         visited[x][y] = true;
         // 1번이라면, 해당하는 열 터뜨리기
         if(choose == 1){
-            for(int i = 0; i < n; i++){
-                visited[i][y] = true;
+            for(int i = x - 2; i <= x + 2; i++){
+                int X = i;
+                if(InRange(X, y)){
+                    visited[X][y] = true;
+                }
+                
             }
         }
         // 2번이라면, 상하좌우 터뜨리기
