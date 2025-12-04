@@ -1,7 +1,9 @@
+//package CodeTree;
+
 import java.util.*;
 
 public class Main {
-   
+
     static int[][] ladder;
     static int[] temp;
     static int[] answer;
@@ -32,7 +34,7 @@ public class Main {
         for(int i = 0; i < m; i++){
             for(int j = 0; j < n - 1; j++){
                 if(ladder[i][j] == 1){
-                   swap(j, temp);
+                    swap(j, temp);
                 }
             }
         }
@@ -60,14 +62,14 @@ public class Main {
 
     static void choose(int curr){
         if(curr == m){
-           init();
-           ride();
+            init();
+            ride(); 
 
-           if(isEquals(temp, answer)){
-               minCount = Math.min(minCount, count);
-           }
-           
-           return;
+            if(isEquals(temp, answer)){
+                minCount = Math.min(minCount, count);
+            }
+
+            return;
         }
 
         Point p = points.get(curr);
@@ -75,42 +77,45 @@ public class Main {
         // 가로줄 선택 X
         ladder[p.x][p.y] = 0;
         choose(curr + 1);
+        ladder[p.x][p.y] = 1;
+        
 
         // 가로줄 선택 O
-        ladder[p.x][p.y] = 1;
         count++;
         choose(curr + 1);
         count--;
+        
+        
 
-    
+
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         m = sc.nextInt();
-        //init 
-        ladder = new int[m][n];
+        //init
+        ladder = new int[15][n];
         points = new ArrayList<>();
-       
-        
+
+
         for(int i = 0; i < m; i++){
             int a = sc.nextInt() - 1;
             int b = sc.nextInt() - 1;
-            ladder[b][a] = 1;   // 사다리 시작점 기록하기 
+            ladder[b][a] = 1;   // 사다리 시작점 기록하기
             points.add(new Point(b, a));
         }
 
         // Please write your code here.
-        // init data 
+        // init data
         temp = new int[n];
         answer = new int[n];
-        
+
         init();
         ride();  // 사다리타기
         copy(temp, answer);
         init();
-
+        
         choose(0);
         System.out.println(minCount);
 
