@@ -74,16 +74,18 @@ public class Main {
 
         Point p = points.get(curr);
 
+        // 가로줄 선택 O
+        count++;
+        choose(curr + 1);
+        count--;
+        
+
         // 가로줄 선택 X
         ladder[p.x][p.y] = 0;
         choose(curr + 1);
         ladder[p.x][p.y] = 1;
         
 
-        // 가로줄 선택 O
-        count++;
-        choose(curr + 1);
-        count--;
         
         
 
