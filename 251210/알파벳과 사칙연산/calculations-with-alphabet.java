@@ -4,7 +4,7 @@ public class Main {
     public static int m;
     public static ArrayList<Integer> realOperand = new ArrayList<>();
     public static int sum = 0;
-    public static int answer = 0;
+    public static int answer = - 500;
     public static String expression;
     
     // choose(curr) : curr위치에 1부터 4까지를 선택하는 함수 
