@@ -6,7 +6,7 @@ public class Main {
     static int n;
 
     public static void choose(int curr, int cnt){
-        if(curr == n - 1){
+        if(curr == n - 1 || curr >= n){
             minJumps = Math.min(minJumps, cnt);
             return;
         }
