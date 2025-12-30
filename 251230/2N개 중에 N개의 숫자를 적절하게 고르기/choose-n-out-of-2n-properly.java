@@ -16,9 +16,12 @@ public class Main {
 
     public static int n;
     public static void choose(int idx, int cnt, int localSum){
-        if(cnt == n || idx == 2 * n){
+        if(cnt == n){
             answer = Math.min(answer, Math.abs(2 * localSum - sum));
             //System.out.println(answer);
+            return;
+        }
+        if(idx == 2 * n){
             return;
         }
         // 선택 O
